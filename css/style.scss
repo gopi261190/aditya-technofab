@@ -1,0 +1,1057 @@
+// home-start
+
+$primary-font: "Montserrat", sans-serif;
+$secondry-font: "Roboto", sans-serif;
+$primary-color: #0094da;
+$secondry-color: #f2f1ed;
+$white-col: #fff;
+$light-black: #333;
+$black-col: black;
+
+@mixin flex-property {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+html {
+  font-size: 16px;
+}
+.flex {
+  @include flex-property();
+}
+.inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1%;
+}
+// header-start
+
+.container {
+  // width: 100%;
+  // height: 100vh;
+  // // background-image: url(../image/bbc.jpg);
+  // background-attachment: fixed;
+  // background-repeat: repeat;
+  // background-position: center top;
+  // background-size: cover;
+  position: relative;
+
+  .navigation {
+    width: 100%;
+    background-color: $white-col;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 0px 0px 5px 0px $primary-color;
+
+    opacity: 0.9;
+    .nav-bar {
+      align-items: center;
+      padding: 0% 1%;
+      .logo {
+        width: 140px;
+      }
+      ul {
+        width: 70%;
+        justify-content: flex-end;
+
+        li {
+          list-style: none;
+          font-size: 1rem;
+          margin: 0% 4%;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .blue {
+          color: $primary-color;
+        }
+        li:hover {
+          color: $primary-color;
+          cursor: pointer;
+          border-bottom: 1px solid $primary-color;
+        }
+        a:hover {
+          color: $primary-color;
+          cursor: pointer;
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+      .toggle {
+        display: none;
+      }
+    }
+  }
+  .banner {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: flex-start;
+    z-index: 1;
+    height: 100%;
+    color: $white-col;
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 5rem;
+      margin-top: 20px;
+    }
+    .small-size {
+      font-style: italic;
+      background-color: $light-black;
+      padding: 0px 20px;
+    }
+  }
+}
+// header end
+
+// quote-start
+.quote-full {
+  width: 100%;
+  background-color: $secondry-color;
+  color: $white-col;
+  padding: 10px 0px;
+  .quote {
+    align-items: center;
+    h4 {
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $light-black;
+    }
+    .quote-btn {
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: 1px solid $light-black;
+      font-family: $primary-font;
+    }
+    .quote-btn:hover {
+      background-color: $primary-color;
+      color: $white-col;
+      border: 1.5px solid $white-col;
+      cursor: pointer;
+    }
+  }
+}
+// quote-end
+
+// services-start
+.services-full {
+  width: 100%;
+  background-image: url(../image/adityatechnofab.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0%;
+  .company-services {
+    text-align: center;
+    color: $white-col;
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+
+      margin: 10px 0px 15px 0px;
+    }
+    .service-line {
+      width: 90px;
+      border: none;
+      height: 4px;
+      margin: 0 auto;
+      background-color: $primary-color;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-top: 20px;
+      padding: 0px 20%;
+      line-height: 30px;
+    }
+    .six-box {
+      .box {
+        width: 24%;
+        margin-top: 50px;
+        padding-block: 3rem;
+        border-radius: 0.5rem;
+        border: 1px solid #dbdbdb2d;
+        box-shadow: 0 2px 8px 0 rgb(255 255 255 / 8%);
+        transition: all 0.2s ease;
+        .icon {
+          font-size: 50px;
+          color: $primary-color;
+        }
+        h4 {
+          font-size: 1.1rem;
+          font-weight: 500;
+          padding: 20px 0px;
+        }
+        p {
+          font-size: 0.9rem;
+          padding: 0;
+        }
+      }
+      .box:hover {
+        transform: translateY(-20px);
+        background-color: rgb(255, 255, 255);
+        color: #0094da;
+      }
+      .blue-btn {
+        padding: 50px;
+      }
+    }
+  }
+  .blue-btn {
+    width: 15rem;
+    margin-top: 5rem;
+    padding-block: 1.2rem;
+    text-decoration: none;
+    background-color: #0094da;
+    display: inline-block;
+    color: white;
+    transition: all 0.3s ease;
+    border: 1px solid #ffffff00;
+  }
+  .blue-btn i {
+    margin-right: 0.4rem;
+    transition: all 0.3s ease;
+  }
+  .blue-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #dbdbdb2d;
+    box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.08);
+  }
+  .blue-btn.white {
+    background-color: #ffffff;
+    color: #0094da;
+    margin-left: 1rem;
+  }
+  .blue-btn:hover i {
+    transform: translateY(-10px);
+  }
+}
+
+// service-end
+
+// projects
+.projects {
+  .projects-box {
+    width: 100%;
+    padding: 5% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding-bottom: 10px;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+
+      margin: 10px 0px 15px 0px;
+    }
+    .line {
+      width: 90px;
+      border: none;
+      height: 4px;
+      background-color: $primary-color;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-top: 20px;
+
+      line-height: 35px;
+    }
+    .small-text {
+      font-size: 0.9rem;
+      padding: 30px 0px;
+      margin-top: 0;
+      line-height: 40px;
+    }
+    .provide {
+      font-size: 1rem;
+      font-weight: 500;
+      display: inline;
+      color: #333;
+      margin-left: 30px;
+    }
+    .check {
+      display: inline;
+      color: #0094da;
+      margin: 5px 0px;
+      font-size: 1.1rem;
+    }
+
+    .two-image {
+      padding: 25px 0px;
+      .img-box {
+        width: 30%;
+        transition: all 0.2s ease;
+      }
+      .img-box:hover {
+        transform: translateY(-20px);
+        background-color: rgb(255, 255, 255);
+        color: #0094da;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .new {
+    width: 100%;
+    height: 500px;
+    background-image: url("../image/project.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin-bottom: 50px;
+    transition: all 0.2s ease;
+  }
+  .new:hover {
+    transform: translateY(-20px);
+    background-color: rgb(255, 255, 255);
+    color: #0094da;
+  }
+}
+
+// testimonial-start
+
+.testimonial-full {
+  width: 100%;
+  text-align: center;
+  background-color: $secondry-color;
+  .testimonial-services {
+    text-align: center;
+    color: $light-black;
+    padding: 5% 0%;
+    .client {
+      width: 100%;
+      // background-color: #fff;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .test-img {
+        width: 150px;
+        height: 150px;
+        display: inline;
+        border-radius: 100%;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+
+      margin: 10px 0px 15px 0px;
+    }
+    .service-line {
+      width: 90px;
+      border: none;
+      height: 4px;
+      margin: 0 auto;
+      background-color: $primary-color;
+    }
+    .center {
+      display: block;
+    }
+
+    .brand {
+      width: 100%;
+
+      .item {
+        width: 100%;
+        height: 100vh;
+        background-color: #333;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        img {
+          width: 100%;
+          height: 100vh;
+        }
+      }
+    }
+  }
+}
+.b-img {
+  width: 26%;
+  margin: 20px 0px;
+}
+.brand-img {
+  width: 100%;
+  // background-image: url(../image/adityatechnofab.png);
+  padding: 50px 0px;
+}
+// testimonial end
+.owl-carousel .owl-item img {
+  height: 100vh;
+}
+// footer-start
+
+.footer {
+  width: 100%;
+  color: $white-col;
+
+  padding: 5% 0%;
+  background-image: url("../image/adityatechnofab.png");
+  .footer-inner {
+    .footer-box {
+      width: 28%;
+
+      .footer-line {
+        width: 55px;
+        height: 2px;
+        background-color: $primary-color;
+        border: none;
+        margin: 10px 0px;
+      }
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 30px;
+        text-transform: capitalize;
+      }
+      .number {
+        padding-top: 20px;
+      }
+      .social {
+        padding: 12px;
+        border-radius: 100%;
+        background-color: $primary-color;
+        font-size: 1.2rem;
+        margin: 15px 3px;
+      }
+      .f-social {
+        padding: 12px 17px;
+      }
+      .map {
+        // width: 100%;
+        // background-color: #f2f1ed;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        transition-duration: 0.9s;
+        display: block;
+      }
+      img:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+// footer-end
+
+// copyright-start
+
+.copyright-full {
+  width: 100%;
+  background-color: $secondry-color;
+  color: $light-black;
+  padding: 30px 0px;
+  text-align: center;
+  .copyright {
+    p {
+      word-spacing: 2px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// copyright-start
+
+// home-end
+
+// about-start
+
+$primary-font: "Montserrat", sans-serif;
+$secondry-font: "Roboto", sans-serif;
+$primary-color: #0094da;
+$secondry-color: #f2f1ed;
+$white-col: #fff;
+$light-black: #333;
+$black-col: black;
+
+@mixin flex-property {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+html {
+  font-size: 16px;
+}
+.flex {
+  @include flex-property();
+}
+.inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1%;
+}
+// header-start
+
+.navigation {
+  width: 100%;
+  background-color: $white-col;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 0px 5px 0px $primary-color;
+  opacity: 0.9;
+  .nav-bar {
+    align-items: center;
+    padding: 0% 1%;
+    .logo {
+      width: 140px;
+    }
+    ul {
+      width: 30%;
+
+      li {
+        list-style: none;
+        font-size: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .blue {
+        color: $primary-color;
+      }
+      li:hover {
+        color: $primary-color;
+        cursor: pointer;
+        border-bottom: 1px solid $primary-color;
+      }
+      a:hover {
+        color: $primary-color;
+        cursor: pointer;
+        border-bottom: 1px solid $primary-color;
+      }
+    }
+    .toggle {
+      display: none;
+    }
+  }
+}
+.about-container {
+  width: 100%;
+  height: 75vh;
+  background-image: url(../image/adityatechnofab.png);
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: cover;
+  .about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    color: $white-col;
+    h1 {
+      font-size: 3.1rem;
+      font-weight: 500;
+      padding: 20px 0px;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 20px;
+    }
+    p {
+      line-height: 30px;
+      font-size: 1.1rem;
+    }
+  }
+}
+// header-end
+
+// network-start
+
+.network {
+  padding: 5% 0%;
+  .network-box {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin: 10px 0px;
+    }
+    .line {
+      width: 90px;
+      border: none;
+      height: 4px;
+      background-color: $primary-color;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 30px;
+      margin-top: 20px;
+      text-align: justify;
+    }
+    .small-text {
+      font-size: 0.9rem;
+      padding: 50px 0px;
+      margin-top: 0;
+    }
+    .h-btn {
+      background-color: #0094da;
+      color: #fff;
+      width: 140px;
+      height: 45px;
+      border: none;
+    }
+  }
+  .new-box {
+    width: 53%;
+    // background-image: url("../image/image-032.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+// network-end
+
+// quote-start
+.about-quote {
+  width: 100%;
+  background-color: $secondry-color;
+  color: $white-col;
+  padding: 10px 0px;
+  .quote {
+    align-items: center;
+    h4 {
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $light-black;
+    }
+    .quote-btn {
+      padding: 10px 20px;
+      border-radius: 3px;
+      border: 1px solid $light-black;
+      font-family: $primary-font;
+    }
+    .quote-btn:hover {
+      background-color: $primary-color;
+      color: $white-col;
+      border: 1.5px solid $white-col;
+      cursor: pointer;
+    }
+  }
+}
+// quote-end
+
+// company-skills-start
+
+.company-skills {
+  width: 100%;
+  background-image: url(../image/adityatechnofab.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0%;
+  color: #fff;
+  .company-services {
+    .skills-box {
+      width: 45%;
+      text-align: left;
+      h3 {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        margin: 10px 0px 15px 0px;
+      }
+      .service-line {
+        width: 90px;
+        border: none;
+        height: 4px;
+        margin: 0 auto;
+        background-color: $primary-color;
+      }
+      li {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        line-height: 30px;
+      }
+      .line {
+        width: 90px;
+        border: none;
+        height: 4px;
+        background-color: $primary-color;
+      }
+    }
+    .progress-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      #file {
+        width: 100%;
+        height: 70px;
+      }
+    }
+  }
+}
+
+// company-skill-end
+
+// service-start
+
+.about-services {
+  padding: 5% 0%;
+  // .new-box {
+  //   width: 50%;
+  //   background-image: url("../image/wh.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center top;
+  //   img {
+  //     width: 100%;
+  //   }
+  // }
+  .services-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 20px 0px;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+    .line {
+      width: 90px;
+      border: none;
+      height: 4px;
+      background-color: $primary-color;
+    }
+    li {
+      font-size: 1.1rem;
+      margin-top: 20px;
+
+      line-height: 30px;
+    }
+    .small-text {
+      font-size: 0.9rem;
+      padding: 20px 0px;
+      margin-top: 0;
+    }
+    .h-btn {
+      background-color: #0094da;
+      color: #fff;
+      width: 140px;
+      height: 45px;
+      border: none;
+    }
+  }
+}
+// services-end
+// footer-start
+
+.footer {
+  width: 100%;
+  color: $white-col;
+
+  padding: 5% 0%;
+  background-image: url("../image/adityatechnofab.png");
+  .footer-inner {
+    .footer-box {
+      width: 32%;
+
+      .footer-line {
+        width: 55px;
+        height: 2px;
+        background-color: $primary-color;
+        border: none;
+        margin: 10px 0px;
+      }
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 30px;
+        text-transform: capitalize;
+      }
+      .number {
+        padding-top: 20px;
+      }
+      .social {
+        padding: 12px;
+        border-radius: 100%;
+        background-color: $primary-color;
+        font-size: 1.2rem;
+        margin: 15px 3px;
+      }
+      .f-social {
+        padding: 12px 17px;
+      }
+      // .map {
+      //   overflow: hidden;
+      // }
+      img {
+        width: 100%;
+        transition-duration: 0.9s;
+        display: block;
+      }
+      img:hover {
+        transform: scale(1.5);
+      }
+    }
+    .map-box {
+      width: 32%;
+      .map {
+        width: 100%;
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// footer-end
+
+// copyright-start
+
+.copyright-full {
+  width: 100%;
+  background-color: $secondry-color;
+  color: $light-black;
+  padding: 30px 0px;
+  text-align: center;
+  .copyright {
+    p {
+      word-spacing: 2px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// copyright-start
+
+// about0-end
+
+// media
+
+@media only screen and (max-width: 1125px) {
+  .container .banner {
+    // width: 100%;
+    left: 5%;
+  }
+  .container .banner h1,
+  .container .banner h2 {
+    font-size: 3.8rem;
+  }
+  .services-full .company-services p {
+    padding: 0% 5%;
+  }
+  .services-full .company-services .six-box .box {
+    width: 28%;
+    margin: 2%;
+  }
+  .six-box {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .navigation .nav-bar .menu {
+    display: none;
+  }
+  .container .navigation .nav-bar ul {
+    width: 100%;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .container .navigation .nav-bar ul li {
+    display: inline-block;
+    padding-top: 20px;
+  }
+
+  .container .navigation .nav-bar {
+    padding-bottom: 10px;
+  }
+  .container .navigation .nav-bar .toggle {
+    display: block;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
+  .footer .footer-inner .footer-box {
+    width: 45%;
+  }
+  .footer .footer-inner .map-box {
+    width: 90%;
+    // height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .map {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .projects .projects-box .two-image .img-box {
+    width: 100%;
+    padding-top: 5%;
+  }
+  .container .banner {
+    left: 0%;
+  }
+  .container .banner h1,
+  .container .banner h2 {
+    font-size: 3rem;
+  }
+  .container .banner .small-size {
+    padding: 0;
+  }
+  .services-full .company-services .six-box .box {
+    width: 45%;
+  }
+  .services-full .blue-btn {
+    width: 12rem;
+  }
+  .container .navigation .nav-bar ul li {
+    margin: 0% 2.9%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .services-full .company-services .six-box .box {
+    width: 90%;
+    margin: 25px auto;
+  }
+  .container .banner h1 {
+    font-size: 3rem;
+  }
+  .container .banner h2 {
+    font-size: 2.5rem;
+  }
+  .b-img {
+    width: 45%;
+  }
+  .footer .footer-inner .footer-box {
+    width: 90%;
+    margin: 25px auto;
+  }
+  iframe {
+    height: 250px;
+  }
+  .services-full .blue-btn.white {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .quote-full .quote {
+    justify-content: center;
+    text-align: center;
+  }
+  .quote-full .quote .quote-btn {
+    margin-top: 25px;
+  }
+  .services-full .company-services h1,
+  .projects .projects-box h1 {
+    font-size: 2.2rem;
+  }
+  .services-full .company-services p,
+  .projects .projects-box p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .projects .projects-box .line {
+    margin: 0 auto;
+  }
+  .projects .projects-box h1 {
+    text-align: center;
+  }
+  .projects .projects-box .provide {
+    margin-left: 15px;
+  }
+  .services-full,
+  .projects .projects-box {
+    padding: 50px 0px;
+  }
+  .projects .new {
+    height: 250px;
+    padding-top: 0px;
+  }
+  .container .navigation .nav-bar ul li {
+    display: block;
+  }
+  .container .navigation .nav-bar .logo {
+    width: 120px;
+  }
+  .container .banner h1 {
+    margin-top: 50px;
+    font-size: 2.8rem;
+  }
+}

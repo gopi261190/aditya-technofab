@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.green.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- navigation -->
+    <header class="container">
+      <nav class="navigation">
+        <div class="nav-bar flex">
+          <img
+            src="image/logo.png"
+            class="logo"
+            alt="Aditya TechnoFab Pvt Ltd"
+          />
+          <ul class="menu flex" id="myDIV">
+            <li class="blue"><a href="home.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="contact.html" class="nav_active">Contact</a></li>
+          </ul>
+          <button onclick="myFunction()" class="toggle">
+            <span class="fa fa-bars bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-box">
+      <div class="title">
+        <h2>Contact Us</h2>
+        <hr class="under_line" />
+      </div>
+      <div class="main inner flex">
+        <div class="left">
+          <h3>Aditya Techno Fab</h3>
+          <hr class="under_line" />
+          <p>
+            Plot No. 07, Sector No. 3, Industrial Area, Main Road Sagore,
+            Pithampur, Dhar - 454775 (M.P.) India
+          </p>
+          <p class="number"><span class="fa fa-phone"></span> +91-8048059303</p>
+          <div class="social">
+            <span class="fa-brands fa-facebook fa"></span>
+            <span class="fa-brands fa-twitter fa"></span>
+            <span class="fa-brands fa-linkedin fa"></span>
+          </div>
+        </div>
+        <div class="right">
+          <form
+            action="sendmail.php"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="form_control">
+              <label for="name">Name :</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter Your Name..."
+                require
+              />
+            </div>
+            <div class="form_control">
+              <label for="email">Email :</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Your Email..."
+                require
+              />
+            </div>
+            <div class="form_control">
+              <label for="number">Number :</label>
+              <input
+                type="number"
+                name="number"
+                id="number"
+                placeholder="Enter Your Number..."
+                require
+              />
+            </div>
+            <div class="form_control">
+              <label for="subject">Subject :</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Enter Your Subject..."
+                require
+              />
+            </div>
+            <div class="form_control">
+              <label for="message">Message :</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="5"
+                placeholder="Enter Your Messager..."
+              ></textarea>
+            </div>
+            <div class="form_control">
+              <input
+                type="file"
+                name="attachment"
+                id="file"
+                placeholder="File"
+                require
+              />
+            </div>
+            <div class="form_control">
+              <input type="submit" name="send" class="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer-inner inner flex">
+        <div class="footer-box">
+          <h4>Headquarters</h4>
+          <hr class="footer-line" />
+          <p>
+            Plot No. 07, Sector No. 3, Industrial Area, Main Road Sagore,
+            Pithampur, Dhar - 454775 (M.P.) India
+          </p>
+          <p class="number"><span class="fa fa-phone"></span> +91-8048059303</p>
+        </div>
+        <div class="footer-box">
+          <h4>Get in Touch</h4>
+          <hr class="footer-line" />
+          <p>follow our all activities here -</p>
+          <span class="fa-brands fa-facebook social"></span>
+          <span class="fa-brands fa-twitter social"></span>
+          <span class="fa-brands fa-linkedin social"></span>
+        </div>
+        <div class="map-box">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.082323845037!2d75.60788980674515!3d22.613400797800672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962511b544ad245%3A0xd1ebc0bad20d1526!2sATFC%20Aditya%20Techno%20Fab%20Pvt%20LTd!5e0!3m2!1sen!2sin!4v1676112411751!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- copyright -->
+    <div class="copyright-full">
+      <div class="copyright">
+        <p>
+          2023 : copyright &#169; adityatechnofab pvt ltd | Design by
+          <a href="#">Code Easy Academy</a> Indore .
+        </p>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

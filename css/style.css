@@ -1,0 +1,1209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+nav {
+  scroll-padding: 100px;
+}
+/* classes used frequently */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1%;
+}
+.blue-btn {
+  width: 15rem;
+  padding-block: 1.2rem;
+  text-decoration: none;
+  background-color: #0094da;
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.blue-btn:hover {
+  background-color: transparent;
+  color: #0094da;
+  cursor: pointer;
+  border: 1px solid rgba(219, 219, 219, 0.1764705882);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  position: relative;
+}
+.container .navigation {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 2;
+}
+.container .navigation .nav-bar {
+  align-items: center;
+  padding: 0% 1%;
+}
+.container .navigation .nav-bar .logo {
+  width: 140px;
+}
+.container .navigation .nav-bar ul {
+  width: 75%;
+  justify-content: flex-end;
+}
+.container .navigation .nav-bar ul li {
+  list-style: none;
+  font-size: 1rem;
+  margin: 0% 4%;
+}
+.container .navigation .nav-bar ul a {
+  text-decoration: none;
+  color: #0094da;
+  font-weight: 600;
+  font-size: 1.03rem;
+  transition: all 0.2s ease-in;
+  display: block;
+  position: relative;
+  padding-block: 1rem;
+}
+.container .navigation .nav-bar ul a:after {
+  content: "";
+  width: 0px;
+  bottom: 10px;
+  height: 2px;
+  background-color: #0094da;
+  position: absolute;
+  left: 0px;
+  transition: all 0.2s ease-in;
+}
+.container .navigation .nav-bar ul .nav_active:after {
+  content: "";
+  width: 100%;
+}
+
+.container .navigation .nav-bar ul .blue {
+  color: #0094da;
+}
+.navigation .nav-bar ul a:hover {
+  transform: translateY(-6px);
+}
+.navigation .nav-bar ul a:hover::after {
+  width: 100%;
+}
+.container .navigation .nav-bar .toggle {
+  display: none;
+}
+
+/* banner */
+.container .banner {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: flex-start;
+  z-index: 1;
+  height: 100%;
+  color: #fff;
+}
+.container .banner h1 {
+  font-size: 5rem;
+}
+.container .banner h2 {
+  font-size: 5rem;
+  margin-top: 20px;
+}
+.container .banner .small-size {
+  background-color: #0096db;
+  padding: 0px 20px;
+}
+
+.quote-full {
+  width: 100%;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px 0px;
+}
+.quote-full .quote {
+  align-items: center;
+}
+.quote-full .quote h4 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #333;
+}
+.quote-full .quote .quote-btn {
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid #333;
+  font-family: "Montserrat", sans-serif;
+}
+.quote-full .quote .quote-btn:hover {
+  background-color: #0094da;
+  color: #fff;
+  border: 1.5px solid #fff;
+  cursor: pointer;
+}
+
+.services-full {
+  width: 100%;
+  background-image: url(../image/adityatechnofab.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0%;
+}
+.services-full .company-services {
+  text-align: center;
+  color: #fff;
+}
+.services-full .company-services h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.services-full .company-services h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px 15px 0px;
+}
+.services-full .company-services .service-line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #0094da;
+}
+.services-full .company-services p {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  padding: 0px 1rem;
+  line-height: 30px;
+}
+.services-full .company-services .six-box .box {
+  width: 24%;
+  margin-top: 50px;
+  padding-block: 3rem;
+  border: 1px solid rgba(219, 219, 219, 0.1764705882);
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+.services-full .company-services .six-box .box .icon {
+  font-size: 50px;
+  color: #0094da;
+}
+.services-full .company-services .six-box .box h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+.services-full .company-services .six-box .box p {
+  font-size: 0.9rem;
+  padding: 0;
+}
+.services-full .company-services .six-box .box:hover {
+  transform: translateY(-20px);
+  background-color: rgb(255, 255, 255);
+  color: #0094da;
+}
+.services-full .company-services .six-box .blue-btn {
+  padding: 50px;
+}
+.services-full .blue-btn {
+  margin-top: 5rem;
+}
+.services-full .blue-btn i {
+  margin-right: 0.4rem;
+  transition: all 0.3s ease;
+}
+.services-full .blue-btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(219, 219, 219, 0.1764705882);
+  box-shadow: 0 2px 8px 0 rgba(255, 255, 255, 0.08);
+}
+.services-full .blue-btn.white {
+  background-color: #ffffff;
+  color: #0094da;
+  margin-left: 1rem;
+}
+.services-full .blue-btn:hover i {
+  transform: translateY(-10px);
+}
+
+.projects .projects-box {
+  width: 100%;
+  padding: 5% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.projects .projects-box h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.projects .projects-box .small-text.no-padding-bottom {
+  padding-bottom: 0px;
+}
+.projects .projects-box h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px 15px 0px;
+}
+.projects .projects-box .line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  background-color: #0094da;
+}
+.projects .projects-box .small-text {
+  font-size: 1.1rem;
+  padding: 30px 0px;
+  margin-top: 0;
+  line-height: 40px;
+}
+
+.check-box-inner {
+  width: 100%;
+  background: aliceblue;
+  padding: 1rem;
+  margin-bottom: 13px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.projects .projects-box .provide {
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline;
+  color: #333;
+  margin-left: 1rem;
+}
+.projects .projects-box .check {
+  display: inline;
+  color: #0094da;
+  margin: 5px 0px;
+  font-size: 1.1rem;
+}
+.projects .projects-box .two-image {
+  margin-top: 3rem;
+}
+.projects .projects-box .two-image .img-box {
+  width: 30%;
+  transition: all 0.2s ease;
+}
+.projects .projects-box .two-image .img-box:hover {
+  transform: translateY(-20px);
+  background-color: rgb(255, 255, 255);
+  color: #0094da;
+}
+.projects .projects-box .two-image img {
+  width: 100%;
+}
+.projects .new {
+  width: 100%;
+  height: 500px;
+  background-image: url("../image/project.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 50px;
+  transition: all 0.2s ease;
+}
+.projects .new:hover {
+  transform: translateY(-20px);
+  background-color: rgb(255, 255, 255);
+  color: #0094da;
+}
+
+.testimonial-full {
+  width: 100%;
+  text-align: center;
+  background-color: #f2f1ed;
+}
+.testimonial-full .testimonial-services {
+  text-align: center;
+  color: #333;
+  padding: 5% 0%;
+}
+.testimonial-full .testimonial-services .client {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial-full .testimonial-services .client .test-img {
+  width: 150px;
+  height: 150px;
+  display: inline;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+.testimonial-full .testimonial-services .client p {
+  margin-bottom: 20px;
+}
+.testimonial-full .testimonial-services h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.testimonial-full .testimonial-services h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px 15px 0px;
+}
+.testimonial-full .testimonial-services .service-line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #0094da;
+}
+.testimonial-full .testimonial-services .center {
+  display: block;
+}
+.testimonial-full .testimonial-services .brand {
+  width: 100%;
+}
+.testimonial-full .testimonial-services .brand .item {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.testimonial-full .testimonial-services .brand .item img {
+  width: 100%;
+  height: 100vh;
+}
+
+.b-img {
+  width: 130px;
+  object-fit: contain;
+  margin: 20px 0px;
+  filter: grayscale(1);
+  transition: all 0.2s ease;
+}
+.b-img:hover {
+  filter: unset;
+}
+
+.brand-img {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.owl-carousel .owl-item img {
+  height: 100vh;
+}
+
+.footer {
+  width: 100%;
+  color: #fff;
+  padding: 5% 0%;
+  background-image: url("../image/adityatechnofab.png");
+}
+.footer .footer-inner .footer-box {
+  width: 28%;
+}
+.footer .footer-inner .footer-box .footer-line {
+  width: 55px;
+  height: 2px;
+  background-color: #0094da;
+  border: none;
+  margin: 10px 0px;
+}
+.footer .footer-inner .footer-box h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.footer .footer-inner .footer-box p {
+  font-size: 0.9rem;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.footer .footer-inner .footer-box .number {
+  padding-top: 20px;
+}
+.footer .footer-inner .footer-box .social {
+  padding: 12px;
+  border-radius: 100%;
+  background-color: #0094da;
+  font-size: 1.2rem;
+  margin: 15px 3px;
+}
+.footer .footer-inner .footer-box .f-social {
+  padding: 12px 17px;
+}
+.footer .footer-inner .footer-box .map {
+  overflow: hidden;
+}
+.footer .footer-inner .footer-box img {
+  width: 100%;
+  transition-duration: 0.9s;
+  display: block;
+}
+.footer .footer-inner .footer-box img:hover {
+  transform: scale(1.5);
+}
+
+.copyright-full {
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  padding: 30px 0px;
+  text-align: center;
+}
+.copyright-full .copyright p {
+  word-spacing: 2px;
+  font-size: 0.9rem;
+}
+/* about */
+.navigation .nav-bar {
+  align-items: center;
+  padding: 0% 1%;
+}
+.navigation .nav-bar .logo {
+  width: 140px;
+}
+.navigation .nav-bar ul {
+  width: 30%;
+}
+.navigation .nav-bar ul li {
+  list-style: none;
+  font-size: 1rem;
+}
+.navigation .nav-bar ul a {
+  text-decoration: none;
+  color: black;
+}
+.navigation .nav-bar ul .blue {
+  color: #0094da;
+}
+.navigation .nav-bar .toggle {
+  display: none;
+}
+
+.about-container {
+  width: 100%;
+  height: 75vh;
+  background-image: url(../image/adityatechnofab.png);
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.about-container .about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  color: #fff;
+}
+.about-container .about h1 {
+  font-size: 3.1rem;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+.about-container .about h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.about-container .about p {
+  line-height: 30px;
+  font-size: 1.1rem;
+}
+
+.network {
+  padding: 5% 1%;
+}
+.network .network-box {
+  width: 100%;
+}
+.network .network-box h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.network .network-box h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.network .network-box .line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  background-color: #0094da;
+}
+.network .blue-btn {
+  margin-top: 3rem;
+}
+.network .network-box p {
+  font-size: 1rem;
+  line-height: 30px;
+  margin-top: 20px;
+  text-align: justify;
+}
+.network .network-box .small-text {
+  font-size: 0.9rem;
+  padding: 50px 0px;
+  margin-top: 0;
+}
+.network .network-box .h-btn {
+  background-color: #0094da;
+  color: #fff;
+  width: 140px;
+  height: 45px;
+  border: none;
+}
+.network .new-box {
+  width: 53%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.about-quote {
+  width: 100%;
+  background-color: #f2f1ed;
+  color: #fff;
+  padding: 10px 0px;
+}
+.about-quote .quote {
+  align-items: center;
+}
+.about-quote .quote h4 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #333;
+}
+.about-quote .quote .quote-btn {
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid #333;
+  font-family: "Montserrat", sans-serif;
+}
+.about-quote .quote .quote-btn:hover {
+  background-color: #0094da;
+  color: #fff;
+  border: 1.5px solid #fff;
+  cursor: pointer;
+}
+
+.company-skills {
+  width: 100%;
+  background-image: url(../image/adityatechnofab.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0%;
+  color: #fff;
+}
+.company-skills .company-services .skills-box {
+  width: 45%;
+  text-align: left;
+}
+.company-skills .company-services .skills-box h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.company-skills .company-services .skills-box h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px 15px 0px;
+}
+.company-skills .company-services .skills-box .service-line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #0094da;
+}
+.company-skills .company-services .skills-box li {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  line-height: 30px;
+}
+.company-skills .company-services .skills-box .line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  background-color: #0094da;
+}
+.company-skills .company-services .progress-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.company-skills .company-services .progress-bar #file {
+  width: 100%;
+  height: 70px;
+}
+
+.about-services {
+  padding: 5% 1%;
+}
+.about-services .services-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.about-services .services-box h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 20px 0px;
+  text-transform: capitalize;
+}
+.about-services .services-box h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.about-services .services-box .line {
+  width: 90px;
+  border: none;
+  height: 4px;
+  background-color: #0094da;
+}
+.about-services .services-box li {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  line-height: 30px;
+}
+.about-services .services-box .small-text {
+  font-size: 0.9rem;
+  padding: 20px 0px;
+  margin-top: 0;
+}
+.about-services .services-box .h-btn {
+  background-color: #0094da;
+  color: #fff;
+  width: 140px;
+  height: 45px;
+  border: none;
+}
+
+.footer {
+  width: 100%;
+  color: #fff;
+  padding: 5% 0%;
+  background-image: url("../image/adityatechnofab.png");
+}
+.footer .footer-inner .footer-box {
+  width: 32%;
+}
+.footer .footer-inner .footer-box .footer-line {
+  width: 55px;
+  height: 2px;
+  background-color: #0094da;
+  border: none;
+  margin: 10px 0px;
+}
+.footer .footer-inner .footer-box h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.footer .footer-inner .footer-box p {
+  font-size: 0.9rem;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.footer .footer-inner .footer-box .number {
+  padding-top: 20px;
+}
+.footer .footer-inner .footer-box .social {
+  padding: 12px;
+  border-radius: 100%;
+  background-color: #0094da;
+  font-size: 1.2rem;
+  margin: 15px 3px;
+}
+.footer .footer-inner .footer-box .f-social {
+  padding: 12px 17px;
+}
+.footer .footer-inner .footer-box img {
+  width: 100%;
+  transition-duration: 0.9s;
+  display: block;
+}
+.footer .footer-inner .footer-box img:hover {
+  transform: scale(1.5);
+}
+.footer .footer-inner .map-box {
+  width: 32%;
+}
+.footer .footer-inner .map-box .map {
+  width: 100%;
+}
+.footer .footer-inner .map-box .map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.copyright-full {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000;
+  padding: 30px 0px;
+  text-align: center;
+}
+.copyright-full .copyright p {
+  word-spacing: 2px;
+  font-size: 1rem;
+}
+.copyright-full .copyright p a {
+  color: #0094da;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1125px) {
+  .about-container .about {
+    padding: 50px 10px;
+    height: auto;
+  }
+  .about-container {
+    height: auto;
+  }
+  .container .banner {
+    left: 5%;
+  }
+  .container .banner h1,
+  .container .banner h2 {
+    font-size: 3.8rem;
+  }
+  .services-full .company-services p {
+    padding: 0% 5%;
+  }
+  .services-full .company-services .six-box .box {
+    width: 28%;
+    margin: 2%;
+  }
+  .six-box {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .company-skills .company-services .skills-box {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .container .navigation .nav-bar .menu {
+    display: none;
+  }
+  .container .navigation .nav-bar ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .container .navigation .nav-bar ul li {
+    display: inline-block;
+    padding-top: 20px;
+  }
+  .container .navigation .nav-bar {
+    padding-bottom: 20px;
+  }
+  .container .navigation .nav-bar .toggle {
+    display: block;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
+  .footer .footer-inner .footer-box {
+    width: 45%;
+  }
+  .footer .footer-inner .map-box {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .map {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .projects .projects-box .two-image .img-box {
+    width: 100%;
+    padding-top: 5%;
+  }
+  .container .banner {
+    left: 0%;
+  }
+  .container .banner h1,
+  .container .banner h2 {
+    font-size: 3rem;
+  }
+  .container .banner .small-size {
+    padding: 0;
+  }
+  .services-full .company-services .six-box .box {
+    width: 45%;
+  }
+  .services-full .blue-btn {
+    width: 12rem;
+  }
+  .container .navigation .nav-bar ul li {
+    margin: 0% 2.9%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .company-skills .company-services .skills-box {
+    width: 90%;
+    margin: 50px auto;
+  }
+  .services-full .company-services .six-box .box {
+    width: 90%;
+    margin: 25px auto;
+  }
+  .container .banner h1 {
+    font-size: 3rem;
+  }
+  .container .banner h2 {
+    font-size: 2.5rem;
+  }
+  .b-img {
+    width: 45%;
+  }
+  .footer .footer-inner .footer-box {
+    width: 90%;
+    margin: 25px auto;
+  }
+  iframe {
+    height: 250px;
+  }
+  .services-full .blue-btn.white {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .quote-full .quote {
+    justify-content: center;
+    text-align: center;
+  }
+  .quote-full .quote .quote-btn {
+    margin-top: 25px;
+  }
+  .services-full .company-services h1,
+  .projects .projects-box h1 {
+    font-size: 2.2rem;
+  }
+  .services-full .company-services p,
+  .projects .projects-box p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .projects .projects-box .line {
+    margin: 0 auto;
+  }
+  .projects .projects-box h1 {
+    text-align: center;
+  }
+  .projects .projects-box .provide {
+    margin-left: 15px;
+  }
+  .services-full,
+  .projects .projects-box {
+    padding: 50px 0px;
+  }
+  .projects .new {
+    height: 250px;
+    padding-top: 0px;
+  }
+  .container .navigation .nav-bar ul li {
+    display: block;
+  }
+  .container .navigation .nav-bar .logo {
+    width: 120px;
+  }
+  .container .banner h1 {
+    margin-top: 50px;
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .about-container .about h1 {
+    margin-top: 50px;
+  }
+}
+/* contact page */
+
+.main-box {
+  width: 100%;
+  height: 100vh;
+  min-height: 900px;
+  background-image: url(../image/ab-pr.jpg);
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  text-align: center;
+}
+.title h2 {
+  margin: 0;
+  font-size: 3.1rem;
+  font-weight: 500;
+  padding: 20px 0px;
+  color: #fff;
+}
+.title hr {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.under_line {
+  width: 75px;
+  height: 2px;
+  background-color: #0094da;
+  border: none;
+  margin: 10px 0px;
+}
+.main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main .left {
+  padding: 1rem;
+  width: 45%;
+  color: #fff;
+}
+.main .left h3 {
+  font-size: 2.5rem;
+}
+.main .left p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 37px;
+  padding: 1rem 0rem;
+  text-transform: capitalize;
+}
+.main .left .social .fa {
+  padding-top: 15px;
+  border-radius: 100%;
+  background-color: #0094da;
+  font-size: 1.2rem;
+  margin: 15px 15px;
+  transition: all 0.3s;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.main .left .social .fa:hover {
+  transform: translateY(-10px);
+}
+
+.main .right {
+  background-color: rgba(20, 20, 21, 0.4117647059);
+  padding: 1rem 2rem;
+  width: 45%;
+  border-radius: 15px;
+}
+.main .right form .form_control {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem;
+  color: #fff;
+  margin-top: 15px;
+}
+.main .right form .form_control label {
+  margin-bottom: 5px;
+}
+.main .right form .form_control input,
+.main .right form .form_control textarea {
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+}
+.main .right form .form_control input {
+  height: 45px;
+}
+
+.main .right form .form_control textarea {
+  height: 180px;
+}
+.main .right form .form_control textarea:focus,
+.main .right form .form_control input:focus {
+  outline: none;
+}
+.main .right form .form_control ::-moz-placeholder {
+  font-size: 0.8rem;
+}
+.main .right form .form_control ::placeholder {
+  font-size: 0.8rem;
+}
+.main .right form .form_control .submit {
+  width: 120px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  background-color: #0094da;
+  font-size: 1rem;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-box {
+    height: auto;
+  }
+  .main {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .left,
+  .main .right {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .main .left,
+  .main .right {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
+/* service */
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.card {
+  margin: 0 auto;
+  flex: 1;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 320px) {
+  .card {
+    min-height: 200px;
+    max-width: 380px;
+    height: 100%; /* ? */
+  }
+}
+.card__link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.card__media {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  max-width: 100%;
+
+  position: relative;
+}
+
+.card__body {
+  box-sizing: border-box;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  transition: top 0.3s;
+  color: #fff;
+  position: relative;
+}
+
+@media (min-width: 320px) {
+  .card__body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: calc(100% - 5rem);
+  }
+}
+.card__link:hover .card__body,
+.card__link:focus .card__body {
+  bottom: 0;
+  top: 0;
+  height: 100%;
+}
+
+.card__label {
+  position: absolute;
+  bottom: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem 0.25rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  left: 0;
+  color: #aaa;
+  cursor: default;
+}
+
+.card__heading {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem;
+  line-height: 1.5rem;
+  height: 3rem;
+  text-transform: capitalize;
+}
+
+.card__content {
+  text-align: justify;
+}
+
+.card__more {
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 0.8rem;
+}
+.service-container {
+  height: 60vh;
+}
